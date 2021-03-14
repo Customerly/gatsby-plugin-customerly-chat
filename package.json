@@ -18,7 +18,9 @@
   "keywords": [
     "gatsby",
     "gatsby-plugin",
-    "customerly chat"
+    "customerly",
+    "livechat",
+    "chat"
   ],
   "license": "MIT",
   "main": "index.js",
