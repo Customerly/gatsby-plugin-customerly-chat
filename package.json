@@ -1,0 +1,43 @@
+{
+  "name": "gatsby-plugin-customerly-chat",
+  "description": "Gatsby plugin to add Customerly onto a site",
+  "version": "1.0.0",
+  "author": "Customerly <info@customerly.io>",
+  "files": [
+    "gatsby-browser.js",
+    "gatsby-ssr.js"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-react": "^7.12.13",
+    "cross-env": "^7.0.3",
+    "prettier": "^2.2.1"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "customerly chat"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir .",
+    "prepare": "yarn run build",
+    "prepublish": "cross-env NODE_ENV=production npm run build",
+    "beautify": "yarn run prettier:write",
+    "prettier:check": "prettier -l \"{,!(node_modules|lib|dist|build)/**/}*.{js,jsx,ts,tsx,json,css,scss}\"",
+    "prettier:write": "prettier --write \"{,!(node_modules|lib|dist|build)/**/}*.{js,jsx,ts,tsx,json,css,scss}\""
+  },
+  "dependencies": {
+    "babel-runtime": "^6.26.0"
+  },
+  "peerDependencies": {
+    "gatsby": "^1.0.0 || ^2.0.0 || ^2.0.0-alpha || ^2.0.0-beta"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Customerly/gatsby-plugin-customerly-chat.git"
+  }
+}
