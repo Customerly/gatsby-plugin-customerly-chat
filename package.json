@@ -1,7 +1,7 @@
 {
   "name": "gatsby-plugin-customerly-chat",
   "description": "Gatsby plugin to add Customerly onto a site",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "author": "Customerly <info@customerly.io>",
   "files": [
     "gatsby-browser.js",

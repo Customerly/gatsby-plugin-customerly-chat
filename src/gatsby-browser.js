@@ -4,16 +4,14 @@ const isEnabled = () =>
   typeof window.customerly === `object` &&
   typeof window.customerly.load === `function` &&
   typeof window.customerly.update === `function` &&
-  window.GatsbyCustomerlyAppId;
+  window.GatsbyCustomerlyConfiguration;
 
 exports.onInitialClientRender = () => {
   if (!isEnabled()) {
     return;
   }
 
-  window.customerly.load({
-    app_id: window.GatsbyCustomerlyAppId,
-  });
+  window.customerly.load(JSON.parse(window.GatsbyCustomerlyConfiguration));
 };
 
 exports.onRouteUpdate = function ({ location }) {
@@ -21,7 +19,5 @@ exports.onRouteUpdate = function ({ location }) {
     return;
   }
 
-  window.customerly.update({
-    app_id: window.GatsbyCustomerlyAppId,
-  });
+  window.customerly.update(JSON.parse(window.GatsbyCustomerlyConfiguration));
 };
