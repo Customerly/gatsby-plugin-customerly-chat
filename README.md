@@ -22,7 +22,9 @@ plugins: [
   {
     resolve: 'gatsby-plugin-customerly-chat',
     options: {
-      appId: 'YOUR_CUSTOMERLY_APP_ID',
+      configuration: {
+        app_id: 'YOUR_CUSTOMERLY_APP_ID'
+      },
       includeInDevelopment: true,
     }
   }
@@ -31,7 +33,7 @@ plugins: [
 
 ### Configuration
 
-- `appId` - Required. Your Customerly application ID
+- `configuration` - Required. Your Customerly Configuration (such as `app_id`)
 - `includeInDevelopment` - Optional. Defaults to `false`
 
 Restart your Gatsby server for the plugin to take effect.
